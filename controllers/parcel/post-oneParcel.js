@@ -5,6 +5,7 @@ const router = require("express").Router();
 router.post("/", async (req, res) => {
   try {
     const parcelModel = await Parcel();
+    
     const body = req.body;
 
     const numberOfParcel = await parcelModel.count();
